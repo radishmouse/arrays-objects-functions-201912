@@ -25,6 +25,13 @@ const people = [
     'Ben'
   ]; 
 
+  const products = [
+    { name: 'Basketball', price: 12.00 },
+    { name: 'Tennis Racquet', price: 66.00 },
+    { name: 'Tennis Balls', price: 9.00 },
+    { name: 'Tennis Balls', price: 9.00 }
+  ];
+
 //positive numbers.
 function positiveNumbers(anArray){
     return anArray.filter(x => x > 0);
@@ -108,5 +115,25 @@ function strMultiply(str, times){
     return range(1, times).reduce((x => x + str),str);
 }
 
-
 console.log(strMultiply('abc', 5));
+
+
+//SORTING STUFF!!!1!!
+
+//basic sort
+function sort(anArray){
+    return anArray.sort();
+}
+console.log(sort(people));
+
+//sort by length of string
+function sortLength(strArray){
+    return strArray.sort((a,b) => a.length - b.length);
+}
+console.log(sortLength(people));
+
+// sort by price value
+function priceSort(objArray){
+    return objArray.sort((a,b) => a.price - b.price)
+}
+console.log(priceSort(products));
