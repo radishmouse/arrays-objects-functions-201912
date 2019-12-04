@@ -67,3 +67,46 @@ function goodJob(nameArray){
 }
 console.log("GOOD JOB EVERYBODY!!!!!!");
 goodJob(people);    
+
+//messing with "call3Times"!
+function call3Times(fun) {
+    fun();
+    fun();
+    fun();
+  }
+
+call3Times(x => console.log("HELLO WORLD!!!!")); 
+
+function callNTimes(n, fun){
+    for(let i=0; i < n;i++){
+        fun();
+    }
+}
+
+callNTimes(5, x => console.log("Hello WORLD!!!"));
+
+//string multiplier thingy.
+
+// function strMultiply(str, times){
+//     let newStr="";
+//     for (let i =0; i < times; i++){
+//         newStr+=str;
+//     }
+//     return newStr;
+// }
+
+
+function range(min, max) {
+    const arr = [];
+    for (var i = min; i < max; i++) {
+      arr.push(i);
+    }
+    return arr;
+  }
+
+function strMultiply(str, times){
+    return range(1, times).reduce((x => x + str),str);
+}
+
+
+console.log(strMultiply('abc', 5));
