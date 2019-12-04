@@ -112,10 +112,10 @@ function range(min, max) {
   }
 
 function strMultiply(str, times){
-    return range(1, times).reduce((x => x + str),str);
+    return range(0, times).reduce((x => x + str),"");
 }
 
-console.log(strMultiply('abc', 5));
+console.log(strMultiply('abc', 0));
 
 
 //SORTING STUFF!!!1!!
