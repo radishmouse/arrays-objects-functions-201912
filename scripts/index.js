@@ -161,6 +161,34 @@ function strMultiply(str, times) {
 console.log(strMultiply(`abc`, 5));
 
 
+////////////////////////////// *** BONUS*** //////////////////////////////
+
+// sort an array 
+
+people.sort();
+console.log(people);
+
+// sort an array 2 
+
+people.sort(function(a,b) {
+    return a.length - b.length;
+});
+
+console.log(people);
+
+// sort an array 3 
+
+const products = [
+    { name: 'Basketball', price: 12.00 },
+    { name: 'Tennis Racquet', price: 66.00 },
+    { name: 'Tennis Balls', price: 9.00 },
+    { name: 'Tennis Balls', price: 9.00 }
+];
+
+products.sort(function (a,b) {return a.price - b.price});
+console.log(products);
+
+
 
 
 
