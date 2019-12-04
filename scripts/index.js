@@ -157,3 +157,34 @@ function strMultiply(str, times) {
     return newArray
 }
 console.log(strMultiply('abc', 5));
+
+// Bonus: Array sorting
+// Sort an array
+// Given an array of strings such as the array of names given 
+// in one of the "Good Job" problem, sort them by alphabetically order.
+
+people.sort();
+console.log(people);
+
+// Sort an array, 2
+// Sort the same array, but not by alphabetically order, 
+// but by how long each name is, shortest name first.
+
+people.sort(function(a,b) {
+    return a.length - b.length;
+});
+
+console.log(people);
+
+// Sort an array, 3
+// Given an array of array of products, sort by price:
+
+const products = [
+    { name: 'Basketball', price: 12.00 },
+    { name: 'Tennis Racquet', price: 66.00 },
+    { name: 'Tennis Balls', price: 9.00 },
+    { name: 'Tennis Balls', price: 9.00 }
+  ];
+
+  products.sort(function(a, b) {return a.price - b.price})
+    console.log(products);
