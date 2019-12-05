@@ -63,3 +63,28 @@ function strMultiplyWithRange(str, times) {
 
 const multipliedStr = strMultiplyWithRange('cat', 5);
 console.log(multipliedStr);
+
+const products = [
+    { name: 'Basketball', price: 12.00 },
+    { name: 'Tennis Racquet', price: 66.00 },
+    { name: 'Tennis Balls', price: 9.00 },
+    { name: 'Tennis Balls', price: 9.00 }
+  ];
+
+function byPrice(a, b) {
+    const priceOfItemA = a.price;
+    const priceOfItemB = b.price;
+
+    // debugger;
+
+    if (priceOfItemA < priceOfItemB) {
+      return -1;
+    }
+    if (priceOfItemA > priceOfItemB) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  }
+
+  products.sort(byPrice);
